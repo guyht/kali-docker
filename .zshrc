@@ -99,11 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Antigen plugins
-antigen_plugins=(pyenv python vscode web-search yarn Z django npm osx common-aliases brew dotenv git docker command-not-found zsh-users/zsh-autosuggestions)
+antigen_plugins=(pyenv python pip web-search yarn z django npm common-aliases dotenv git docker command-not-found zsh-users/zsh-autosuggestions)
 
 
 #source .antigenrc
-source /usr/local/share/antigen/antigen.zsh
+source /root/antigen.zsh
 antigen use oh-my-zsh
 
 for pl in $antigen_plugins
