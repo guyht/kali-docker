@@ -21,6 +21,11 @@ RUN curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 RUN sh install.sh --unattended
 RUN curl -L git.io/antigen > antigen.zsh
 
+WORKDIR /usr/share/wordlists
+RUN gunzip rockyou.txt.gz
+
+WORKDIR /root
+
 # Setup zsh and shortcuts
 ADD ./.zshrc /root/.zshrc
 RUN ln -s /data/.zsh_history /root/.zsh_history
